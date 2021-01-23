@@ -1,0 +1,49 @@
+.product {
+  display: flex;
+  flex-direction: column;
+  background-color: aqua;
+
+  &__img {
+  }
+
+  &__details {
+    background-color: chartreuse;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &--spec {
+      align-self: stretch;
+
+      display: flex;
+      flex-direction: column;
+      background-color: chocolate;
+      align-items: center;
+
+      &-name {
+      }
+      &-brand {
+      }
+      &-category {
+      }
+      &-price {
+      }
+    }
+
+    &--customers_voice {
+      display: flex;
+      flex-direction: row;
+      background-color: blueviolet;
+
+      &-rating {
+        padding: 1rem 0.5rem 1rem 0.5rem;
+        align-self: flex-start;
+      }
+
+      &-reviews {
+        padding: 1rem 0.5rem 1rem 0.5rem;
+        align-self: flex-end;
+      }
+    }
+  }
+}
