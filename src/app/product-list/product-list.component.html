@@ -1,15 +1,19 @@
-<div class="product">
-  <img src="http://placeimg.com/640/480/fashion" alt="" class="product__img" />
-  <div class="product__details">
-    <div class="product__details--spec">
-      <div class="product__details--spec-name">NAME</div>
-      <div class="product__details--spec-brand">BRAND</div>
-      <div class="product__details--spec-category">CATEGORY</div>
-      <div class="product__details--spec-price">PRICE</div>
+<div class="product_list" id="product_list">
+  <div *ngFor="let product of updatedProductsList" class="product">
+    <div class="product__img--container">
+      <img src="http://placeimg.com/640/480/fashion" alt="" class="product__img--img" />
     </div>
-    <div class="product__details--customers_voice">
-      <div class="product__details--customers_voice-rating">RATING</div>
-      <div class="product__details--customers_voice-reviews">REVIEWS</div>
+    <div class="product__details">
+      <div class="product__details--spec">
+        <div class="product__details--spec-name">{{ product.name }}</div>
+        <div class="product__details--spec-brand">{{ product.brand }}</div>
+        <div class="product__details--spec-category">{{ product.category }}</div>
+        <div class="product__details--spec-price">{{ product.price }}</div>
+      </div>
+      <div class="product__details--customers_voice">
+        <div class="product__details--customers_voice-rating">{{ product.rating }}</div>
+        <div class="product__details--customers_voice-reviews">{{ product.reviews }}</div>
+      </div>
     </div>
   </div>
 </div>
