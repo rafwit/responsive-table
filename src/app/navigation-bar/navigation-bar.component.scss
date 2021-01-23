@@ -1,0 +1,40 @@
+@import '../../styles/abstracts/variables';
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin: 2rem;
+
+  &__button {
+    &:link,
+    &:visited {
+      align-self: center;
+      font-size: $default-font-size;
+      color: $color-blue;
+      text-decoration: none;
+      border-bottom: 0.1rem solid $color-blue;
+      padding: 1rem;
+      transition: all 0.2s;
+    }
+
+    &:hover {
+      background-color: $color-blue;
+      color: $color-white;
+      box-shadow: 0 1rem 2rem rgba($color-black, 0.15);
+      transform: translateY((-0.2rem));
+    }
+
+    &:active {
+      box-shadow: 0 0.5rem 1rem rgba($color-black, 0.15);
+      transform: translateY((0));
+    }
+  }
+
+  &__number {
+    align-self: center;
+    font-size: $default-font-size;
+    color: $color-blue;
+    padding: 1rem;
+  }
+}

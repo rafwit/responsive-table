@@ -1,3 +1,7 @@
-<a href="#product_list" (click)="showNextPage()">NEXT</a>
-<br />
-<a href="#product_list" (click)="showPreviousPage()">PREVIOUS</a>
+<div class="navigation">
+  <a href="#product_list" (click)="showPreviousPage()" class="navigation__button"
+    >&larr; Previous page</a
+  >
+  <p class="navigation__number">{{ currentPage }}</p>
+  <a href="#product_list" (click)="showNextPage()" class="navigation__button">Next page &rarr;</a>
+</div>
