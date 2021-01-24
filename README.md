@@ -1,27 +1,45 @@
-# ResponsiveTable
+## Responsive Table task
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.1.
+This task was done as part of recruitment journey with Seller.Tools.
 
-## Development server
+### Getting started
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+This app serves products from [this API](https://github.com/seller-tools/products-api). You need it running locally to be able to use this app fully.
 
-## Code scaffolding
+After that:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. Clone this repository
 
-## Build
+```
+$ git clone https://github.com/rafwit/responsive-table
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+2. Navigate to its root folder and run
 
-## Running unit tests
+```
+ng serve -o
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Work done
 
-## Running end-to-end tests
+I created responsive table that serves the data from [this API](https://github.com/seller-tools/products-api).
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+#### 🧠 **Decisions**
 
-## Further help
+- Desktop first, `1rem` = `10px`;
+- Breakpoints:
+  - 1200px,
+  - 900px,
+  - 800px,
+  - 600px,
+  - 500px
+- Pagination: 50 items as in spec; it gives option to moves forward or back by one page.
+- I used external style dependency [ngx-bar-rating](https://www.npmjs.com/package/ngx-bar-rating) to style ratings. I decided that it is fairly reliable for this project, even tough it has 19 issues raised (in 4 years timeline). It has over 4000 weekly and has been recently updated.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+#### **Things that could be improved 📈**
+
+1. Add more tests.
+2. Add ability to switch between custom pages, not just by one.
+3. Develop cache mechanism ♻︎ for already fetched products.
+
+**Thanks and I'll appreciate the feedback 💡**
