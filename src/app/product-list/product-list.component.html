@@ -1,18 +1,25 @@
-<div class="product_list" id="product_list">
-  <div *ngFor="let product of updatedProductsList" class="product">
-    <div class="product__img--container">
-      <img src="http://placeimg.com/640/480/fashion" alt="" class="product__img--img" />
-    </div>
-    <div class="product__details">
-      <div class="product__details--spec">
-        <div class="product__details--spec-name">{{ product.name }}</div>
-        <div class="product__details--spec-brand">{{ product.brand }}</div>
-        <div class="product__details--spec-category">{{ product.category }}</div>
-        <div class="product__details--spec-price">{{ product.price }}</div>
+<div class="container">
+  <div class="product_list" id="product_list">
+    <div *ngFor="let product of updatedProductsList" class="product">
+      <div class="product__img--container">
+        <img src="http://placeimg.com/640/480/fashion" alt="" class="product__img--img" />
       </div>
-      <div class="product__details--customers_voice">
-        <div class="product__details--customers_voice-rating">{{ product.rating }}</div>
-        <div class="product__details--customers_voice-reviews">{{ product.reviews }}</div>
+      <div class="product__details">
+        <div class="product__details--spec">
+          <div class="product__details--spec-name">{{ product.name }}</div>
+          <div class="product__details--spec-brand">{{ product.brand }}</div>
+          <div class="product__details--spec-category">{{ product.category }}</div>
+          <div class="product__details--spec-price">{{ product.price }} {{ product.currency }}</div>
+        </div>
+        <div class="product__details--customers_voice">
+          <bar-rating
+            [(rate)]="product.rating"
+            [max]="5"
+            [readOnly]="true"
+            class="product__details--customers_voice-rating"
+          ></bar-rating>
+          <div class="product__details--customers_voice-reviews">({{ product.reviews }})</div>
+        </div>
       </div>
     </div>
   </div>
