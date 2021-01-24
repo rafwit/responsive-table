@@ -1,7 +1,21 @@
 <div class="navigation">
-  <a href="#product_list" (click)="showPreviousPage()" class="navigation__button"
+  <a
+    *ngIf="currentPage > 1; else elseBlock1"
+    (click)="showPreviousPage()"
+    class="navigation__button navigation__button--previous"
+    routerLink="/list/{{ currentPage - 1 }}"
+    href="#product_list"
     >&larr; Previous page</a
   >
-  <p class="navigation__number">{{ currentPage }}</p>
-  <a href="#product_list" (click)="showNextPage()" class="navigation__button">Next page &rarr;</a>
+  <ng-template #elseBlock1></ng-template>
+  <p class="navigation__number">Page {{ currentPage }}</p>
+  <a
+    *ngIf="currentPage !== 200; else elseBlock2"
+    (click)="showNextPage()"
+    class="navigation__button navigation__button--next"
+    routerLink="/list/{{ currentPage + 1 }}"
+    href="#product_list"
+    >Next page &rarr;</a
+  >
+  <ng-template #elseBlock2></ng-template>
 </div>
