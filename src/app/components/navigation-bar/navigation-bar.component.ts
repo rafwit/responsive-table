@@ -1,8 +1,8 @@
 import { Component, EventEmitter, OnDestroy, OnInit, Output } from '@angular/core';
 import { Event } from '@angular/router';
 import { Observable, Subscription } from 'rxjs';
-import { Product } from '../product';
-import { ApiService } from '../services/api.service';
+import { Product } from '../../product';
+import { ApiService } from '../../services/api.service';
 
 @Component({
   selector: 'app-navigation-bar',

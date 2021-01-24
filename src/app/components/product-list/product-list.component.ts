@@ -1,8 +1,8 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { Product } from '../product';
-import { ApiService } from '../services/api.service';
-import { ScrollTopService } from '../services/scroll-top.service';
+import { Product } from '../../product';
+import { ApiService } from '../../services/api.service';
+import { ScrollTopService } from '../../services/scroll-top.service';
 
 @Component({
   selector: 'app-product-list',
