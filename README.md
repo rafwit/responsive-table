@@ -1,12 +1,12 @@
-## Responsive Table task
+## Responsive Table
 
-This task was done as part of recruitment journey with Seller.Tools.
+Single page, desktop first app build with Angular and CSS with SASS.
 
 ### Getting started
 
 This app serves products from [this API](https://github.com/seller-tools/products-api). You need it running locally to be able to use this app fully.
 
-After that:
+To start the app:
 
 1. Clone this repository
 
@@ -17,29 +17,23 @@ $ git clone https://github.com/rafwit/responsive-table
 2. Navigate to its root folder and run
 
 ```
-ng serve -o
+$ npm install
 ```
 
-### Work done
+and
 
-I created responsive table that serves the data from [this API](https://github.com/seller-tools/products-api).
+```
+$ ng serve -o
+```
 
-#### 🧠 **Decisions**
+### Example screens showing response with screen size change
 
-- Desktop first, `1rem` = `10px`;
-- Breakpoints:
-  - 1200px,
-  - 900px,
-  - 800px,
-  - 600px,
-  - 500px
-- Pagination: 50 items as in spec; it gives option to moves forward or back by one page.
-- I used external style dependency [ngx-bar-rating](https://www.npmjs.com/package/ngx-bar-rating) to style ratings. I decided that it is fairly reliable for this project, even tough it has 19 issues raised (in 4 years timeline). It has over 4000 weekly and has been recently updated.
+🔎 768x1024px
 
-#### **Things that could be improved 📈**
+<img src="./assets/768x1024px.png" style="zoom:10%">
 
-1. Add more tests.
-2. Add ability to switch between custom pages, not just by one.
-3. Develop cache mechanism ♻︎ for already fetched products.
+🔎 414x736px
 
-**Thanks and I'll appreciate the feedback 💡**
+<img src="./assets/414x736px.png" style="zoom:10%">
+
+**Best 🌍**
